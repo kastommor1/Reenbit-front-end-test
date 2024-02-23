@@ -1,10 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import classes from "./App.module.css"
+
+import RangeForecast from "./components/RangeForecast/RangeForecast";
+import TodayForecast from "./components/TodayForecast/TodayForecast";
+import Trips from "./components/Trips/Trips";
+
 
 function App() {
   return (
-    <div>
-      <h1>Hello world :)</h1>
+    <div className={classes.app}>
+      <div className={classes.left}>
+        <h1>Weather Forecast</h1>
+        <Trips />
+        <RangeForecast/>       
+      </div>
+      <TodayForecast/>
     </div>
   );
 }

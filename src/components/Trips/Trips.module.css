@@ -1,0 +1,10 @@
+.trips {
+    border: 1px solid gold;
+    padding: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;    
+}
