@@ -1,4 +1,8 @@
 .countdown {
     display: flex;
     justify-content: space-between;
+
+    z-index: 2;
+    position: relative;
+    margin-bottom: 65px;
 }
