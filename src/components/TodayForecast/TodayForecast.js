@@ -8,7 +8,7 @@ import IconBunch from "./IconBunch/IconBunch";
 
 
 const TodayForecast = () => {
-    const icon = 'clear-day';
+    const icon = 'cloudy';
     
     return (        
         <div className={classes['today-forecast']}>          

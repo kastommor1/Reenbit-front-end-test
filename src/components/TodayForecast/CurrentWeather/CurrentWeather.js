@@ -4,8 +4,8 @@ import classes from "./CurrentWeather.module.css"
 const CurrenWeather = (props) => {
     return (
         <div className={classes["current-weather"]}>
-            <p>Sunday</p>
-            <p>
+            <div className={classes.day}>Sunday</div>
+            <div className={classes.temperature}>
                 <IconWeather
                     className={classes["icon-weather"]}
                     theme='dark'
@@ -13,8 +13,8 @@ const CurrenWeather = (props) => {
                 />
                 24
                 <sup>°C</sup>
-            </p>
-            <p>Berlin</p>
+            </div>
+            <div className={classes.city}>Berlin</div>
         </div>
     )
 }
