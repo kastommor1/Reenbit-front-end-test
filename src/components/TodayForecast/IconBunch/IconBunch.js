@@ -1,17 +1,17 @@
 
 import classes from "./IconBunch.module.css"
 import penguinImg from "../../../assets/penguin.png"
-import cloudy from "../../../assets/cloudy.svg"
+import IconWeather from "../../IconWeather/IconWeather"
 
-const IconBunch = () => {
+const IconBunch = (props) => {
     return (
         <>
             <img src={penguinImg} alt="penguin" className={classes.penguin} />
-            <div className={classes.clouds}>
-                <img src={cloudy} alt="cloudy" />
-                <img src={cloudy} alt="cloudy" />
-                <img src={cloudy} alt="cloudy" />
-                <img src={cloudy} alt="cloudy" />
+            <div className={classes.clouds}>                
+                <IconWeather theme="dark" icon={props.icon} />
+                <IconWeather theme="dark" icon={props.icon} />
+                <IconWeather theme="dark" icon={props.icon} />
+                <IconWeather theme="dark" icon={props.icon} />                
             </div>
         </>
     )

@@ -1,7 +1,7 @@
 import IconWeather from "../../IconWeather/IconWeather";
 import classes from "./CurrentWeather.module.css"
 
-const CurrenWeather = () => {
+const CurrenWeather = (props) => {
     return (
         <div className={classes["current-weather"]}>
             <p>Sunday</p>
@@ -9,7 +9,7 @@ const CurrenWeather = () => {
                 <IconWeather
                     className={classes["icon-weather"]}
                     theme='dark'
-                    weather='clear-day'
+                    icon={props.icon}
                 />
                 24
                 <sup>°C</sup>

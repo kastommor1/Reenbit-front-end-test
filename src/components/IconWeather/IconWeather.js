@@ -5,14 +5,14 @@ const IconWeather = (props) => {
         'rain', 'rain-snow', 'rain-snow-showers-day', 'rain-snow-showers-night', 'showers-day', 'showers-night', 'sleet', 'snow', 'snow-showers-day',
         'snow-showers-night', 'thunder', 'thunder-rain', 'thunder-showers-day', 'thunder-showers-night', 'wind'];
 
-    const isAvailableIcon = availableIcon.includes(props.weather)
+    const isAvailableIcon = availableIcon.includes(props.icon)
     if (!isAvailableIcon) {
         return <img src={forbidden} alt="icon-weather" className={props.className} />
     }
 
 
     const theme = props.theme === 'dark' ? '1st-Set-Color-SVG-Dark' : "1st-Set-Color-SVG";
-    const link = `assets/${theme}/${props.weather}.svg`;
+    const link = `assets/${theme}/${props.icon}.svg`;
     return (               
         <img src={link} alt="icon-weather" className={props.className} />
     )
