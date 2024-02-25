@@ -9,7 +9,7 @@ function App() {
   return (
     <div className={classes.app}>
       <div className={classes.left}>
-        <h1>Weather Forecast</h1>
+        <h1><span>Weather</span> Forecast</h1>
         <Trips />
         <RangeForecast/>       
       </div>
