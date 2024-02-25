@@ -1,4 +1,4 @@
-import penguin from "../../assets/penguin.png"
+import forbidden from "../../assets/forbidden.svg"
 
 const IconWeather = (props) => {
     const availableIcon = ['clear-day', 'clear-night', 'cloudy', 'fog', 'hail', 'partly-cloudy-day', 'partly-cloudy-night',
@@ -7,7 +7,7 @@ const IconWeather = (props) => {
 
     const isAvailableIcon = availableIcon.includes(props.weather)
     if (!isAvailableIcon) {
-        return <img src={penguin} alt="icon-weather" className={props.className} />
+        return <img src={forbidden} alt="icon-weather" className={props.className} />
     }
 
 
