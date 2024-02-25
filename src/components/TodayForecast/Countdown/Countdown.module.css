@@ -4,5 +4,17 @@
 
     z-index: 2;
     position: relative;
-    margin-bottom: 65px;
+    margin: 0 15px;
+    margin-bottom: 95px;
+}
+
+.column p:first-child{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 0px;
+}
+
+.column p:last-child{
+    font-size: 12px;
+    line-height: 1px;    
 }
