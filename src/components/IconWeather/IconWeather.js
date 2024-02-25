@@ -1,11 +1,20 @@
-import clearDayDark from "../../assets/1st-Set-Color-SVG-Dark/clear-day.svg"
+import penguin from "../../assets/penguin.png"
 
-const IconWeather = (props)=>{
-    // const link =  require('../../assets/1st-Set-Color-SVG-Dark/clear-day.svg');
+const IconWeather = (props) => {
+    const availableIcon = ['clear-day', 'clear-night', 'cloudy', 'fog', 'hail', 'partly-cloudy-day', 'partly-cloudy-night',
+        'rain', 'rain-snow', 'rain-snow-showers-day', 'rain-snow-showers-night', 'showers-day', 'showers-night', 'sleet', 'snow', 'snow-showers-day',
+        'snow-showers-night', 'thunder', 'thunder-rain', 'thunder-showers-day', 'thunder-showers-night', 'wind'];
 
-    return (
-        <img src={clearDayDark} alt="icon-weather" {...props} />
-        // <img src={link} alt="icon-weather" {...props} />
+    const isAvailableIcon = availableIcon.includes(props.weather)
+    if (!isAvailableIcon) {
+        return <img src={penguin} alt="icon-weather" className={props.className} />
+    }
+
+
+    const theme = props.theme === 'dark' ? '1st-Set-Color-SVG-Dark' : "1st-Set-Color-SVG";
+    const link = `assets/${theme}/${props.weather}.svg`;
+    return (               
+        <img src={link} alt="icon-weather" className={props.className} />
     )
 }
 

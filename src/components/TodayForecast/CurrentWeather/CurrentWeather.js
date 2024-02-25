@@ -6,7 +6,11 @@ const CurrenWeather = () => {
         <div className={classes["current-weather"]}>
             <p>Sunday</p>
             <p>
-                <IconWeather className={classes["icon-weather"]} />
+                <IconWeather
+                    className={classes["icon-weather"]}
+                    theme='dark'
+                    weather='clear-day'
+                />
                 24
                 <sup>°C</sup>
             </p>

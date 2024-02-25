@@ -1,7 +1,7 @@
 
 import classes from "./IconBunch.module.css"
 import penguinImg from "../../../assets/penguin.png"
-import cloudy from "../../../assets/1st-Set-Color-SVG/cloudy.svg"
+import cloudy from "../../../assets/cloudy.svg"
 
 const IconBunch = () => {
     return (
