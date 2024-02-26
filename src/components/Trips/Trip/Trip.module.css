@@ -1,7 +1,7 @@
-li {    
+.trip {    
     height: 290px;    
     border: 1px solid #f8f8f8;
-    margin-right: 65px;
+    margin-right: 50px;
     
 
     display: inline-block; 

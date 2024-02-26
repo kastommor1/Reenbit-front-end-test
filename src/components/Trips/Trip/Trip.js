@@ -11,7 +11,11 @@ import TripsContext from "../../../store/trips-context"
 const Trip = props => {
 
     const tripsCtx = useContext(TripsContext);
-    const currentTripId = tripsCtx.currentTripId;
+    const currentTripId = tripsCtx.currentTripId;    
+
+    const setCurrentHandler = ()=>{
+        tripsCtx.setCurrentTripId(props.id)
+    }
 
     const citiesLink = {
         'Poltava': PoltavaImg,
@@ -21,13 +25,14 @@ const Trip = props => {
 
     const isActiveClass = currentTripId == props.id ? classes.active : '';
 
+
     return (
-        <li className={isActiveClass}>
+        <li className={`${isActiveClass} ${classes.trip}`} onClick={setCurrentHandler}>
             <div className={classes.photo}>
                 <img src={citiesLink[props.city]} alt="" />
             </div>
             <div className={classes.description}>
-                <div className={classes.city}>{props.city} - {currentTripId}</div>
+                <div className={classes.city}>{props.city}</div>
                 <div className={classes.date}>{props.startDate}-{props.endDate}</div>
             </div>
         </li>

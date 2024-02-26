@@ -28,13 +28,8 @@ input{
     scrollbar-color: #f2f4f8 #fff;
 }
 
-.trips li:last-child {
-    margin-right: 0;
-}
-
-
 .add{
-    border: none!important;        
+    margin-right: 50px;      
 }
 
 .add div {

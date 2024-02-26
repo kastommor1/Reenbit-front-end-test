@@ -8,8 +8,8 @@ import Trip from "./Trip/Trip"
 
 const Trips = () => {
     const tripsCtx = useContext(TripsContext);
-    const trips = tripsCtx.trips;  
-    const currentTripId = tripsCtx.currentTripId;  
+    const trips = tripsCtx.trips; 
+      
 
     // const sample = {
     //     id: 1,
@@ -31,7 +31,6 @@ const Trips = () => {
                 </li>
 
 
-
                 {trips.map(trip => (
                     <Trip
                         key={trip.id}
@@ -40,21 +39,7 @@ const Trips = () => {
                         startDate={trip.startDate}
                         endDate={trip.endDate}
                     />
-                ))}
-
-
-                {/* 
-                <li className={classes.active}>
-                    <div className={classes.photo}>
-                        <img src={PoltavaImg} alt="" />
-                    </div>
-                    <div className={classes.description}>
-                        <div className={classes.city}>Poltava</div>
-                        <div className={classes.date}>14.07.2023-15.07.2023</div>
-                    </div>
-                </li>
-                 */}
-
+                ))}      
             </ul>
         </div>
     )

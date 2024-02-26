@@ -34,8 +34,7 @@ const TripsProvider = props => {
     }
 
     const setCurrentTripIdHandler = id => {
-        console.log('current trip is set');
-        console.log('id = ', id);
+        setcurrentTripId(id)
     }
 
     const tripContext = {
