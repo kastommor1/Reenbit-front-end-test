@@ -1,10 +1,55 @@
 .trips {
     border: 1px solid gold;
-    padding: 20px;
+    padding: 24px;
+       
 }
 
-ul {
+.trips ul {
     margin: 0;
     padding: 0;
-    list-style: none;    
+    list-style: none;
+    margin-top: 40px;
+
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;   
 }
+
+.trips li {
+    width: 120px;
+    height: 160px;    
+    border: 1px solid black;
+    margin-right: 35px;
+
+    display: inline-block;
+}
+
+.trips li:last-child {
+    margin-right: 0;
+}
+
+.photo{
+    width: 120px;
+    height: 110px;
+    background-color: aqua;
+}
+
+.active {   
+    border: 1px solid #93cbff;     
+}
+
+.city{
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.date{
+    font-size: 9px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.description{
+    padding: 10px;
+}
+
