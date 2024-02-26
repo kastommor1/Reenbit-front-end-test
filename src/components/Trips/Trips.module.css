@@ -1,27 +1,40 @@
 .trips {
     border: 1px solid gold;
-    padding: 24px;
+    padding: 45px;
        
+}
+
+input{
+    font-size: 16px;    
+    font-weight: bold;
+    border: none;
+    background: #f2f4f8;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .trips ul {
     margin: 0;
     padding: 0;
+    padding-bottom: 15px; 
     list-style: none;
-    margin-top: 40px;
+    margin-top: 52px;
 
     display: flex;
     overflow: auto;
-    white-space: nowrap;   
+    white-space: nowrap; 
+    
+    scrollbar-width: thin;
+    scrollbar-color: #f2f4f8 #fff;
 }
 
-.trips li {
-    width: 120px;
-    height: 160px;    
-    border: 1px solid black;
-    margin-right: 35px;
+.trips li {    
+    height: 290px;    
+    border: 1px solid #f8f8f8;
+    margin-right: 65px;
+    
 
-    display: inline-block;
+    display: inline-block;    
 }
 
 .trips li:last-child {
@@ -29,27 +42,48 @@
 }
 
 .photo{
-    width: 120px;
-    height: 110px;
-    background-color: aqua;
+    width: 215px;
+    height: 200px;
+    /* background-color: aqua; */
+}
+
+.photo img {
+    width: 100%;
 }
 
 .active {   
-    border: 1px solid #93cbff;     
+    border: 1px solid #93cbff!important;     
 }
 
 .city{
-    font-size: 9px;
+    font-size: 16px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .date{
-    font-size: 9px;
+    font-size: 16px;
     color: gray;
     margin-top: 5px;
 }
 
 .description{
-    padding: 10px;
+    padding: 15px;
+}
+.add{
+    border: none!important;
+        
+}
+
+.add div {
+    background-color: #f2f4f8;
+    width: 215px;
+    height: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 

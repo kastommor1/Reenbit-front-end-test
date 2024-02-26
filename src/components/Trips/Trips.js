@@ -8,6 +8,11 @@ const Trips = () => {
         <div className={classes.trips}>
             <input type="search" placeholder="Search your trip" />
             <ul>
+                <li className={classes.add}>
+                    <div>
+                       <span>+ Add trip</span>                        
+                    </div>                    
+                </li>
                 <li className={classes.active}>
                     <div className={classes.photo}>
                         <img src={PoltavaImg} alt="" />
@@ -35,7 +40,7 @@ const Trips = () => {
                         <div className={classes.date}>14.07.2023-15.07.2023</div>
                     </div>
                 </li>
-                <li className={classes.active}>
+                <li>
                     <div className={classes.photo}>
                         <img src={PoltavaImg} alt="" />
                     </div>
@@ -44,7 +49,7 @@ const Trips = () => {
                         <div className={classes.date}>14.07.2023-15.07.2023</div>
                     </div>
                 </li>
-                <li className={classes.active}>
+                <li>
                     <div className={classes.photo}>
                         <img src={PoltavaImg} alt="" />
                     </div>
@@ -53,7 +58,7 @@ const Trips = () => {
                         <div className={classes.date}>14.07.2023-15.07.2023</div>
                     </div>
                 </li>
-                <li className={classes.active}>
+                <li>
                     <div className={classes.photo}>
                         <img src={PoltavaImg} alt="" />
                     </div>
