@@ -28,56 +28,19 @@ input{
     scrollbar-color: #f2f4f8 #fff;
 }
 
-.trips li {    
-    height: 290px;    
-    border: 1px solid #f8f8f8;
-    margin-right: 65px;
-    
-
-    display: inline-block; 
-    cursor: pointer;   
-}
-
 .trips li:last-child {
     margin-right: 0;
 }
 
-.photo{
-    width: 230px;
-    height: 210px;    
-}
 
-.photo img {
-    width: 100%;
-}
-
-.active {   
-    border: 1px solid #93cbff!important;     
-}
-
-.city{
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.date{
-    font-size: 16px;
-    color: gray;
-    margin-top: 5px;
-}
-
-.description{
-    padding: 15px;
-}
 .add{
     border: none!important;        
 }
 
 .add div {
     background-color: #f2f4f8;
-    width: 215px;
-    height: 200px;
+    width: 230px;
+    height: 210px;
     font-size: 24px;
     font-weight: bold;
     display: flex;
