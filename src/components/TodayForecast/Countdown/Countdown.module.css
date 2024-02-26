@@ -4,8 +4,12 @@
 
     z-index: 2;
     position: relative;
-    margin: 0 60px;
+    margin: 0 6%;
     margin-bottom: 95px;
+}
+
+.column{
+    text-align: center;
 }
 
 .column p:first-child{

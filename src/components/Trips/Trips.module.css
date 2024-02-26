@@ -1,7 +1,7 @@
 .trips {
-    border: 1px solid gold;
+    /* border: 1px solid gold; */
     padding: 45px;
-       
+    padding-bottom: 0;       
 }
 
 input{
@@ -34,7 +34,8 @@ input{
     margin-right: 65px;
     
 
-    display: inline-block;    
+    display: inline-block; 
+    cursor: pointer;   
 }
 
 .trips li:last-child {
@@ -42,9 +43,8 @@ input{
 }
 
 .photo{
-    width: 215px;
-    height: 200px;
-    /* background-color: aqua; */
+    width: 230px;
+    height: 210px;    
 }
 
 .photo img {
@@ -71,8 +71,7 @@ input{
     padding: 15px;
 }
 .add{
-    border: none!important;
-        
+    border: none!important;        
 }
 
 .add div {
@@ -83,7 +82,10 @@ input{
     font-weight: bold;
     display: flex;
     justify-content: center;
-    align-items: center;
-   
+    align-items: center;      
+}
+
+.add div:hover {
+    background-color: #93cbff;
 }
 
