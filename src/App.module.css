@@ -1,12 +1,11 @@
 .app{
     display: flex;
-    max-width: 980px;
-    margin: 0 auto;
-    margin-top: 60px;
+    max-width: 1760px;
+    margin: 0 auto;    
 }
 
 .app .left {
-    width: 66%;
+    width: 68%;
 }
 
 h1{

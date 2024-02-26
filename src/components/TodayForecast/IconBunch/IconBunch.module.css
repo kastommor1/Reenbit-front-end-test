@@ -1,31 +1,32 @@
 .penguin {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 28px;
+    right: 28px;
+    width: 80px;
 }
 
 .clouds img {
-    width: 150px;
+    width: 240px;
     position: absolute;
     opacity: 0.1;
 }
 
 .clouds img:nth-child(1) {
-    top: 70px;
+    top: 130px;
     right: 0;
 }
 
 .clouds img:nth-child(2) {
-    top: 250px;
-    right: -40px;
+    top: 500px;
+    right: -80px;
 }
 
 .clouds img:nth-child(3) {
-    top: 110px;
-    left: -45px;
+    top: 220px;
+    left: -90px;
 }
 
 .clouds img:nth-child(4) {
-    bottom: 10px;
-    left: -80px;
+    bottom: 20px;
+    left: -100px;
 }
