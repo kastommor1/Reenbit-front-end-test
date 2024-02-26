@@ -8,8 +8,17 @@ import Trip from "./Trip/Trip"
 
 const Trips = () => {
     const tripsCtx = useContext(TripsContext);
-    console.log(tripsCtx.trips);
-    tripsCtx.addTrip({id: 5})
+    const trips = tripsCtx.trips;  
+    const currentTripId = tripsCtx.currentTripId;  
+
+    // const sample = {
+    //     id: 1,
+    //     city: 'Poltava',
+    //     startDate: '15-06-2024',
+    //     endDate: '20-06-2024'
+    // }
+
+
 
     return (
         <div className={classes.trips}>
@@ -17,15 +26,24 @@ const Trips = () => {
             <ul>
                 <li className={classes.add}>
                     <div>
-                       <span>+ Add trip</span>                        
-                    </div>                    
+                        <span>+ Add trip</span>
+                    </div>
                 </li>
 
-                <Trip/>
-                <Trip/>
-                <Trip/>
 
-{/* 
+
+                {trips.map(trip => (
+                    <Trip
+                        key={trip.id}
+                        id={trip.id}
+                        city={trip.city}
+                        startDate={trip.startDate}
+                        endDate={trip.endDate}
+                    />
+                ))}
+
+
+                {/* 
                 <li className={classes.active}>
                     <div className={classes.photo}>
                         <img src={PoltavaImg} alt="" />
@@ -36,7 +54,7 @@ const Trips = () => {
                     </div>
                 </li>
                  */}
-                
+
             </ul>
         </div>
     )

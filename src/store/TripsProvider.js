@@ -10,13 +10,13 @@ const initialTrips = [
         endDate: '20-06-2024'
     },
     {
-        id: 1,
+        id: 2,
         city: 'London',
         startDate: '16-06-2024',
         endDate: '20-06-2024'
     },
     {
-        id: 1,
+        id: 3,
         city: 'Barcelona',
         startDate: '17-06-2024',
         endDate: '20-06-2024'
