@@ -2,8 +2,14 @@ import classes from "./Trips.module.css"
 import PoltavaImg from "../../assets/City-Suit-Small/Poltava.jpg"
 import BarcelonaImg from "../../assets/City-Suit-Small/Barcelona.jpg"
 import LondonImg from "../../assets/City-Suit-Small/London.jpg"
+import { useContext } from "react"
+import TripsContext from "../../store/trips-context"
 
 const Trips = () => {
+    const tripsCtx = useContext(TripsContext);
+    console.log(tripsCtx.trips);
+    tripsCtx.addTrip({id: 5})
+
     return (
         <div className={classes.trips}>
             <input type="search" placeholder="Search your trip" />
