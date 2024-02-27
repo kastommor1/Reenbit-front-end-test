@@ -5,6 +5,7 @@ const TripsContext = React.createContext({
     currentTripId: 1,    
     addTrip: (trip)=>{},
     setCurrentTripId: (id)=>{},
+    apiKay: '',
 });
 
 export default TripsContext;

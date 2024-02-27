@@ -6,20 +6,20 @@ const initialTrips = [
     {
         id: 1,
         city: 'Poltava',
-        startDate: '15-06-2024',
-        endDate: '20-06-2024'
+        startDate: '2024-02-15',
+        endDate: '2024-03-26'
     },
     {
         id: 2,
         city: 'London',
-        startDate: '16-06-2024',
-        endDate: '20-06-2024'
+        startDate: '2024-02-15',
+        endDate: '2024-03-26'
     },
     {
         id: 3,
         city: 'Barcelona',
-        startDate: '17-06-2024',
-        endDate: '20-06-2024'
+        startDate: '2024-02-15',
+        endDate: '2024-03-26'
     }
 ]
 
@@ -42,6 +42,7 @@ const TripsProvider = props => {
         currentTripId: currentTripId,
         addTrip: addTripHandler,
         setCurrentTripId: setCurrentTripIdHandler,
+        apiKay: 'HFQLEB932DZ5X7DUW2SAF6KQS',
     }
 
     return (
