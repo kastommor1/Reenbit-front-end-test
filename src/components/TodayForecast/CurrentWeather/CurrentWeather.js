@@ -5,7 +5,7 @@ import TripsContext from "../../../store/trips-context";
 import useHttp from "../../../hooks/use-http";
 import LoadingIcon from "../../UI/LoadingIcon/LoadingIcon";
 import Warning from "../../UI/Warning/Warning";
-import days from "../../../store/days";
+import days from "../../../data/days";
 
 const CurrenWeather = (props) => {
     

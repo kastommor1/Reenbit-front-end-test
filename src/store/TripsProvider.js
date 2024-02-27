@@ -6,20 +6,20 @@ const initialTrips = [
     {
         id: 1,
         city: 'Poltava',
-        startDate: '2024-02-15',
-        endDate: '2024-03-26'
+        startDate: '2024-03-11',
+        endDate: '2024-03-18'
     },
     {
         id: 2,
         city: 'London',
-        startDate: '2024-02-15',
-        endDate: '2024-03-26'
+        startDate: '2024-03-12',
+        endDate: '2024-03-19'
     },
     {
         id: 3,
         city: 'Barcelona',
-        startDate: '2024-02-15',
-        endDate: '2024-03-26'
+        startDate: '2024-03-13',
+        endDate: '2024-03-20'
     }
 ]
 

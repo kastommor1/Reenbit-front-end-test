@@ -6,7 +6,7 @@ import Day from "./Day/Day";
 import TripsContext from "../../store/trips-context";
 import LoadingIcon from "../UI/LoadingIcon/LoadingIcon";
 import Warning from "../UI/Warning/Warning";
-import days from "../../store/days";
+import days from "../../data/days";
 
 const RangeForecast = () => {
     // const [week, setWeek] = useState([]);   //!!!!!!!!!!Temporary Harcode
