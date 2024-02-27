@@ -6,11 +6,10 @@ import Day from "./Day/Day";
 import TripsContext from "../../store/trips-context";
 import LoadingIcon from "../UI/LoadingIcon/LoadingIcon";
 import Warning from "../UI/Warning/Warning";
-import days from "../../data/days";
 
 const RangeForecast = () => {
-    // const [week, setWeek] = useState([]);   //!!!!!!!!!!Temporary Harcode
-    const [week, setWeek] = useState(days); //!!!!!!!!!!Temporary Harcode
+    const [week, setWeek] = useState([]); 
+   
     const tripsCtx = useContext(TripsContext);
     const { isLoading, error, sendRequest: fetchRageForecast } = useHttp();
 
@@ -27,8 +26,7 @@ const RangeForecast = () => {
 
          
     useEffect(() => {       
-        const transformDays = (forecast) => {
-            console.log(forecast);
+        const transformDays = (forecast) => {            
             const days = forecast.days;
 
             const loadedWeek = [];
@@ -38,7 +36,7 @@ const RangeForecast = () => {
             }            
             setWeek(loadedWeek)
         }       
-        // fetchRageForecast({ url: URL }, transformDays); //!!!!!!!!!!Temporary Harcode
+        fetchRageForecast({ url: URL }, transformDays); 
 
     }, [fetchRageForecast, CITY]);
 

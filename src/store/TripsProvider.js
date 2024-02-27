@@ -41,8 +41,8 @@ const TripsProvider = props => {
         currentTripId: currentTripId,
         addTrip: addTripHandler,
         setCurrentTripId: setCurrentTripIdHandler,
-        apiKay: 'HFQLEB932DZ5X7DUW2SAF6KQS', //my
-        // apiKay: 'R4R2TJMZKSTQCNMF6F6T29JEX',
+        // apiKay: 'HFQLEB932DZ5X7DUW2SAF6KQS', //1
+        apiKay: 'R4R2TJMZKSTQCNMF6F6T29JEX',
     }
 
     return (

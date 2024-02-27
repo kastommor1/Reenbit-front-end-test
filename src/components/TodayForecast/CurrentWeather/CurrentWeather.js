@@ -9,8 +9,7 @@ import days from "../../../data/days";
 
 const CurrenWeather = (props) => {
     
-    // const [day, setDay] = useState([]); //!!!!!!!!!!Temporary Harcode
-    const [day, setDay] = useState(days[0]); //!!!!!!!!!!Temporary Harcode
+    const [day, setDay] = useState([]); //!!!!!!!!!!Temporary Harcode    
     const tripsCtx = useContext(TripsContext);
     const { isLoading, error, sendRequest: fetchDayForecast } = useHttp();
     
@@ -28,14 +27,13 @@ const CurrenWeather = (props) => {
 
 
     useEffect(() => {
-        const transformDay = (forecast) => {
-            console.log(forecast);
+        const transformDay = (forecast) => {            
             const day = forecast.days[0];       
             setDay(day)
             props.setIcon(day.icon)
         }
 
-        // fetchDayForecast({ url: URL }, transformDay); //!!!!!!!!!!Temporary Harcode
+        fetchDayForecast({ url: URL }, transformDay); 
 
     }, [fetchDayForecast, CITY]);
 
