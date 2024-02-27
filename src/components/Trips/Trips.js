@@ -1,28 +1,26 @@
 import classes from "./Trips.module.css"
-import PoltavaImg from "../../assets/City-Suit-Small/Poltava.jpg"
-import BarcelonaImg from "../../assets/City-Suit-Small/Barcelona.jpg"
-import LondonImg from "../../assets/City-Suit-Small/London.jpg"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import TripsContext from "../../store/trips-context"
 import Trip from "./Trip/Trip"
 
 const Trips = () => {
     const tripsCtx = useContext(TripsContext);
-    const trips = tripsCtx.trips; 
-      
+    const [searchInput, setSearchInput] = useState('')
 
-    // const sample = {
-    //     id: 1,
-    //     city: 'Poltava',
-    //     startDate: '15-06-2024',
-    //     endDate: '20-06-2024'
-    // }
+    const searchInputHandler = (event) => {
+        setSearchInput(event.target.value);
+    }
 
-
+    const filteredTrips = tripsCtx.trips.filter(trip => trip.city.toLowerCase().includes(searchInput.toLowerCase()));
 
     return (
         <div className={classes.trips}>
-            <input type="search" placeholder="Search your trip" />
+            <input
+                type="search"
+                placeholder="Search your trip"
+                value={searchInput}
+                onChange={searchInputHandler}
+            />
             <ul>
                 <li className={classes.add}>
                     <div>
@@ -31,7 +29,7 @@ const Trips = () => {
                 </li>
 
 
-                {trips.map(trip => (
+                {filteredTrips.map(trip => (
                     <Trip
                         key={trip.id}
                         id={trip.id}
@@ -39,7 +37,7 @@ const Trips = () => {
                         startDate={trip.startDate}
                         endDate={trip.endDate}
                     />
-                ))}      
+                ))}
             </ul>
         </div>
     )
