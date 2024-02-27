@@ -4,6 +4,8 @@ import classes from "./RangeForecast.module.css"
 import useHttp from "../../hooks/use-http";
 import Day from "./Day/Day";
 import TripsContext from "../../store/trips-context";
+import LoadingIcon from "../LoadingIcon/LoadingIcon";
+import Warning from "../Warning/Warning";
 
 const RangeForecast = () => {
     const [week, setWeek] = useState([]);
@@ -38,6 +40,10 @@ const RangeForecast = () => {
         fetchRageForecast({ url: URL }, transformTasks);
 
     }, [fetchRageForecast, CITY]);
+
+    if( isLoading ){ return  <LoadingIcon/> }
+    if( error ){ return  <Warning>Sorry. Something went wrong</Warning> }
+
 
 
     return (
