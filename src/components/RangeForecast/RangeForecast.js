@@ -4,8 +4,8 @@ import classes from "./RangeForecast.module.css"
 import useHttp from "../../hooks/use-http";
 import Day from "./Day/Day";
 import TripsContext from "../../store/trips-context";
-import LoadingIcon from "../LoadingIcon/LoadingIcon";
-import Warning from "../Warning/Warning";
+import LoadingIcon from "../UI/LoadingIcon/LoadingIcon";
+import Warning from "../UI/Warning/Warning";
 import days from "../../store/days";
 
 const RangeForecast = () => {
@@ -52,7 +52,8 @@ const RangeForecast = () => {
             <h2>Week</h2>
             <ul>
                 {week.map(day => (
-                    <Day
+                    <Day                        
+                        key={day.datetime}
                         date={day.datetime}
                         icon={day.icon}
                         tempMin={day.tempmin}

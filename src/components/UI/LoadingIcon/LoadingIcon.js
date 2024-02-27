@@ -1,4 +1,4 @@
-import loadingIMG from "../../assets/Spinner.svg"
+import loadingIMG from "../../../assets/Spinner.svg"
 
 const LoadingIcon = (props)=>{
     return(

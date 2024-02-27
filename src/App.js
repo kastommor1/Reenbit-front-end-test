@@ -1,3 +1,4 @@
+import { useState } from "react";
 import classes from "./App.module.css"
 
 import RangeForecast from "./components/RangeForecast/RangeForecast";
@@ -7,6 +8,20 @@ import TripProvider from "./store/TripsProvider";
 
 
 function App() {
+
+  const [createTripIsShown, setCreateTripIsShown] = useState(false);
+
+  const showCreateTripHandler = () => {
+    setCreateTripIsShown(true);
+  };
+
+  const hideCreateTripHandler = () => {
+    setCreateTripIsShown(false);
+  };
+
+  
+
+
   return (
     <TripProvider>
       <div className={classes.app}>

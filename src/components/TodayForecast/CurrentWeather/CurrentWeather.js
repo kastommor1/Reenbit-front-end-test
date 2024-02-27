@@ -3,8 +3,8 @@ import IconWeather from "../../IconWeather/IconWeather";
 import classes from "./CurrentWeather.module.css"
 import TripsContext from "../../../store/trips-context";
 import useHttp from "../../../hooks/use-http";
-import LoadingIcon from "../../LoadingIcon/LoadingIcon";
-import Warning from "../../Warning/Warning";
+import LoadingIcon from "../../UI/LoadingIcon/LoadingIcon";
+import Warning from "../../UI/Warning/Warning";
 import days from "../../../store/days";
 
 const CurrenWeather = (props) => {
