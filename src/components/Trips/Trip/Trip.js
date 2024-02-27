@@ -11,7 +11,11 @@ import TripsContext from "../../../store/trips-context"
 const Trip = props => {
 
     const tripsCtx = useContext(TripsContext);
-    const currentTripId = tripsCtx.currentTripId;    
+    const currentTripId = tripsCtx.currentTripId;
+    const startDateFormated = props.startDate.split('-').slice().reverse().join('.');
+    const endDateFormated = props.endDate.split('-').slice().reverse().join('.');
+
+
 
     const setCurrentHandler = ()=>{
         tripsCtx.setCurrentTripId(props.id)
@@ -33,7 +37,7 @@ const Trip = props => {
             </div>
             <div className={classes.description}>
                 <div className={classes.city}>{props.city}</div>
-                <div className={classes.date}>{props.startDate}-{props.endDate}</div>
+                <div className={classes.date}>{startDateFormated}-{endDateFormated}</div>
             </div>
         </li>
     )
