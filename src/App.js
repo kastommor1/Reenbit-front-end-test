@@ -5,6 +5,7 @@ import RangeForecast from "./components/RangeForecast/RangeForecast";
 import TodayForecast from "./components/TodayForecast/TodayForecast";
 import Trips from "./components/Trips/Trips";
 import TripProvider from "./store/TripsProvider";
+import CreateTrip from "./components/CreateTrip/CreateTrip";
 
 
 function App() {
@@ -24,11 +25,13 @@ function App() {
 
   return (
     <TripProvider>
+       {createTripIsShown && <CreateTrip onClose={hideCreateTripHandler} />} 
+
       <div className={classes.app}>
 
         <div className={classes.left}>
           <h1><span>Weather</span> Forecast</h1>
-          <Trips />
+          <Trips onShowModal={setCreateTripIsShown}/>
           <RangeForecast />
         </div>
 

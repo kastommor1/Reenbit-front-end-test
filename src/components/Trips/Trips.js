@@ -3,7 +3,7 @@ import { useContext, useState } from "react"
 import TripsContext from "../../store/trips-context"
 import Trip from "./Trip/Trip"
 
-const Trips = () => {
+const Trips = (props) => {
     const tripsCtx = useContext(TripsContext);
     const [searchInput, setSearchInput] = useState('')
 
@@ -22,7 +22,7 @@ const Trips = () => {
                 onChange={searchInputHandler}
             />
             <ul>
-                <li className={classes.add}>
+                <li className={classes.add} onClick={props.onShowModal}>
                     <div>
                         <span>+ Add trip</span>
                     </div>
