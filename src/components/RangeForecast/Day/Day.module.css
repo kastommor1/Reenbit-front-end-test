@@ -1,0 +1,13 @@
+.day{
+    color: gray;
+}
+
+.icon{
+    width: 55px;
+    margin: 25px 0;
+}
+
+.temperature{
+    font-weight: bold;
+    font-size: 14px;
+}
