@@ -11,7 +11,7 @@ const Trips = (props) => {
         setSearchInput(event.target.value);
     }
 
-    const filteredTrips = tripsCtx.trips.filter(trip => trip.city.toLowerCase().includes(searchInput.toLowerCase()));
+    const filteredTrips = tripsCtx.trips.filter(trip => trip.city.toLowerCase().includes(searchInput.toLowerCase())).reverse();
 
     return (
         <div className={classes.trips}>
