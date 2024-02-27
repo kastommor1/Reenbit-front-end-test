@@ -11,8 +11,6 @@ const RangeForecast = () => {
 
     useEffect(() => {
         const transformTasks = (forecast) => {
-            console.log(forecast);
-
             const days = forecast.days;
 
             const loadedWeek = [];
@@ -21,14 +19,13 @@ const RangeForecast = () => {
                 loadedWeek.push(days[dayKey]);
             }
 
-            console.log(loadedWeek);            
+            console.log(loadedWeek);
             setWeek(loadedWeek)
-
         }
 
-        const CITY = 'Poltava';
-        const START_DATE = '2024-03-24';
-        const END_DATE = '2024-03-31';
+        const CITY = 'London';
+        const START_DATE = '2024-01-24';
+        const END_DATE = '2024-01-31';
         const API_KEY = 'HFQLEB932DZ5X7DUW2SAF6KQS'
 
 
@@ -36,26 +33,23 @@ const RangeForecast = () => {
             + CITY + '/' + START_DATE + '/' + END_DATE +
             '?unitGroup=metric&include=days%2Ccurrent&key=' + API_KEY + '&contentType=json';
 
-        // fetchRageForecast({ url: URL }, transformTasks);
+        fetchRageForecast({ url: URL }, transformTasks);
 
     }, [fetchRageForecast]);
 
-
-    const arr = [1, 2, 3, 4, 5, 6, 7]
+    
     return (
         <div className={classes['range-forecast']}>
             <h2>Week</h2>
             <ul>
-                {arr.map(item => (
+                {week.map(day => (
                     <Day                        
-                        key={item}
-                        date={'2020-12-13'}                        
-                        icon={'cloudy'}
-                        tempMin={'15'}                                                
-                        tempMax={'25'}                                                
+                        date={day.datetime}
+                        icon={day.icon}
+                        tempMin={day.tempmin}
+                        tempMax={day.tempmax}
                     />
                 ))}
-
             </ul>
         </div>
     )

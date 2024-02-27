@@ -4,8 +4,15 @@
 
 .icon{
     width: 55px;
-    margin: 25px 0;
+    height: 100px;   
+    display: flex;    
+    margin: 0 auto;
 }
+
+.icon img {
+    width: 100%;
+}
+
 
 .temperature{
     font-weight: bold;
