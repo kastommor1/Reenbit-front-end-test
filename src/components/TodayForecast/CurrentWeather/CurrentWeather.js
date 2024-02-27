@@ -5,10 +5,12 @@ import TripsContext from "../../../store/trips-context";
 import useHttp from "../../../hooks/use-http";
 import LoadingIcon from "../../LoadingIcon/LoadingIcon";
 import Warning from "../../Warning/Warning";
+import days from "../../../store/days";
 
 const CurrenWeather = (props) => {
     
-    const [day, setDay] = useState([]);
+    // const [day, setDay] = useState([]); //!!!!!!!!!!Temporary Harcode
+    const [day, setDay] = useState(days[0]); //!!!!!!!!!!Temporary Harcode
     const tripsCtx = useContext(TripsContext);
     const { isLoading, error, sendRequest: fetchDayForecast } = useHttp();
     
@@ -33,7 +35,7 @@ const CurrenWeather = (props) => {
             props.setIcon(day.icon)
         }
 
-        fetchDayForecast({ url: URL }, transformDay);
+        // fetchDayForecast({ url: URL }, transformDay); //!!!!!!!!!!Temporary Harcode
 
     }, [fetchDayForecast, CITY]);
 

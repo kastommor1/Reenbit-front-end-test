@@ -6,9 +6,11 @@ import Day from "./Day/Day";
 import TripsContext from "../../store/trips-context";
 import LoadingIcon from "../LoadingIcon/LoadingIcon";
 import Warning from "../Warning/Warning";
+import days from "../../store/days";
 
 const RangeForecast = () => {
-    const [week, setWeek] = useState([]);
+    // const [week, setWeek] = useState([]);   //!!!!!!!!!!Temporary Harcode
+    const [week, setWeek] = useState(days); //!!!!!!!!!!Temporary Harcode
     const tripsCtx = useContext(TripsContext);
     const { isLoading, error, sendRequest: fetchRageForecast } = useHttp();
 
@@ -36,7 +38,7 @@ const RangeForecast = () => {
             }            
             setWeek(loadedWeek)
         }       
-        fetchRageForecast({ url: URL }, transformDays);
+        // fetchRageForecast({ url: URL }, transformDays); //!!!!!!!!!!Temporary Harcode
 
     }, [fetchRageForecast, CITY]);
 
