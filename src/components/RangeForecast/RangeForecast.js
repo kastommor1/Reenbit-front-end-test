@@ -25,7 +25,7 @@ const RangeForecast = () => {
 
          
     useEffect(() => {       
-        const transformTasks = (forecast) => {
+        const transformDays = (forecast) => {
             console.log(forecast);
             const days = forecast.days;
 
@@ -33,11 +33,10 @@ const RangeForecast = () => {
             for (const dayKey in days) {
                 if (dayKey > 6) { break }
                 loadedWeek.push(days[dayKey]);
-            }
-            // console.log(loadedWeek);
+            }            
             setWeek(loadedWeek)
         }       
-        fetchRageForecast({ url: URL }, transformTasks);
+        fetchRageForecast({ url: URL }, transformDays);
 
     }, [fetchRageForecast, CITY]);
 

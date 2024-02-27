@@ -1,20 +1,59 @@
+import { useContext, useEffect, useState } from "react";
 import IconWeather from "../../IconWeather/IconWeather";
 import classes from "./CurrentWeather.module.css"
+import TripsContext from "../../../store/trips-context";
+import useHttp from "../../../hooks/use-http";
+import LoadingIcon from "../../LoadingIcon/LoadingIcon";
+import Warning from "../../Warning/Warning";
 
 const CurrenWeather = (props) => {
+    
+    const [day, setDay] = useState([]);
+    const tripsCtx = useContext(TripsContext);
+    const { isLoading, error, sendRequest: fetchDayForecast } = useHttp();
+    
+    const nowDate = new Date();
+    const dayTitle = new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(nowDate);
+   
+    const currentTrip = tripsCtx.trips.find(trip => trip.id === tripsCtx.currentTripId);
+    const CITY = currentTrip.city;
+    const API_KEY = tripsCtx.apiKay; 
+
+
+    const URL = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'
+        + CITY + '/today?unitGroup=metric&include=days%2Ccurrent&key=' + API_KEY + '&contentType=json';
+        
+
+
+    useEffect(() => {
+        const transformDay = (forecast) => {
+            console.log(forecast);
+            const day = forecast.days[0];       
+            setDay(day)
+            props.setIcon(day.icon)
+        }
+
+        fetchDayForecast({ url: URL }, transformDay);
+
+    }, [fetchDayForecast, CITY]);
+
+    if (isLoading) { return <LoadingIcon className={classes.loading} /> }
+    if (error) { return <Warning>Sorry. Something went wrong</Warning> }
+
+
     return (
         <div className={classes["current-weather"]}>
-            <div className={classes.day}>Sunday</div>
+            <div className={classes.day}>{dayTitle}</div>
             <div className={classes.temperature}>
                 <IconWeather
                     className={classes["icon-weather"]}
                     theme='dark'
-                    icon={props.icon}
+                    icon={day.icon}
                 />
-                24
+                {day.temp}
                 <sup>°C</sup>
             </div>
-            <div className={classes.city}>Berlin</div>
+            <div className={classes.city}>{CITY}</div>        
         </div>
     )
 }
