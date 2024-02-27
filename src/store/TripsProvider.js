@@ -26,11 +26,10 @@ const initialTrips = [
 const TripsProvider = props => {
 
     const [trips, setTrips] = useState(initialTrips);
-    const [currentTripId, setcurrentTripId] = useState(1);
+    const [currentTripId, setcurrentTripId] = useState(initialTrips[initialTrips.length-1].id);   
 
-    const addTripHandler = trip => {
-        console.log('Trip added');
-        console.log(trip);
+    const addTripHandler = trip => {       
+        setTrips(oldTrips=>[...oldTrips, trip])
     }
 
     const setCurrentTripIdHandler = id => {

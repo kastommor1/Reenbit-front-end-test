@@ -2,7 +2,7 @@ import classes from "./Trip.module.css"
 import PoltavaImg from "../../../assets/City-Suit-Small/Poltava.jpg"
 import BarcelonaImg from "../../../assets/City-Suit-Small/Barcelona.jpg"
 import LondonImg from "../../../assets/City-Suit-Small/London.jpg"
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import TripsContext from "../../../store/trips-context"
 
 
@@ -27,7 +27,7 @@ const Trip = props => {
         'Barcelona': BarcelonaImg,
     }
 
-    const isActiveClass = currentTripId == props.id ? classes.active : '';
+    const isActiveClass = currentTripId === props.id ? classes.active : '';
 
 
     return (

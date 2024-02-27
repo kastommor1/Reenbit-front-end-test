@@ -1,0 +1,79 @@
+.heading{
+    padding: 0 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+.heading p{    
+    font-weight: bold;
+}
+
+.form {
+    margin: 20px;
+    margin-right: 40px   
+  }
+  
+  .control {
+    margin-bottom: 0.5rem;
+  }
+  
+  .control label {   
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+
+  .control label span{   
+    color: #ca3e51;
+  }
+
+
+  
+  .control input , .control select{    
+    border: 1px solid #ccc;    
+    width: 100%; 
+    padding: 10px;   
+  }
+
+  .control input {    
+        
+    width: calc(100% - 20px); 
+      
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 50px;
+  }
+  
+  .actions button {  
+    cursor: pointer;
+    background-color: transparent;
+    border: none;   
+    padding: 0.5rem 2rem; 
+  }
+  
+  .actions button:hover,
+  .actions button:active {
+    background-color: #ffe6dc;
+  }
+  
+  .actions .submit {   
+    background-color: #1890ff;
+    color: white;
+  }
+  
+  .actions .submit:hover,
+  .actions .submit:active {
+    background-color: #ccc;
+  }
+  
+  .invalid label {
+    color: #ca3e51;
+  }
+  
+  .invalid input, .invalid select {
+    border-color: #aa0b20;
+    background-color: #ffeff1;
+  }

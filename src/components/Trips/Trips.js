@@ -16,6 +16,7 @@ const Trips = (props) => {
     return (
         <div className={classes.trips}>
             <input
+                className={classes.search}
                 type="search"
                 placeholder="Search your trip"
                 value={searchInput}
